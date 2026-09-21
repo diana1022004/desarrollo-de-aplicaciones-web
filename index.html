@@ -1,116 +1,191 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Página de Web Development con modo claro y oscuro usando JavaScript, localStorage y sessionStorage." />
-    <meta name="author" content="Kelly Marin" />
-    <title>Web Usb Cali</title>
-    
-    <link rel="icon" type="image/x-icon" href="assets/usb.ico" />
-    
-    <link href="css/styles.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desarrollo de Aplicaciones Web | Portafolio de Diana</title>
+    <meta name="description"
+        content="Portafolio de la clase Desarrollo de Aplicaciones Web: ejercicios, talleres y proyectos hechos con HTML, CSS y JavaScript.">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2306120b'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='800' text-anchor='middle' fill='%23c8f542' font-family='sans-serif'%3ED%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Serif:ital@1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
+
+    <!-- Se carga aquí para aplicar el tema guardado antes de pintar la página -->
+    <script src="js/theme.js"></script>
 </head>
 
 <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNavbar">
-        <div class="container px-5">
-            <a class="navbar-brand" href="#!">Web Development</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#modules">Módulos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                        <button id="themeToggle" class="btn btn-outline-light btn-sm theme-toggle" type="button" aria-label="Cambiar a modo oscuro">
-                            <span id="themeIcon" aria-hidden="true">🌙</span>
-                            <span id="themeText">Modo oscuro</span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="Diana, ir al inicio">
+            <span class="brand-mark" aria-hidden="true">D</span>
+            <span>Diana</span>
+        </a>
+
+        <nav class="nav-pill" aria-label="Secciones">
+            <a href="#inicio" class="is-active" aria-current="true">Inicio</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#clase">La clase</a>
+            <a href="#contacto">Código</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="themeToggle" class="pill pill-ghost theme-toggle" type="button">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+                </svg>
+                <span id="themeText">Modo claro</span>
+            </button>
+            <a class="pill pill-lime" data-repo-link href="https://github.com/diana1022004/desarrollo-de-aplicaciones-web"
+                target="_blank" rel="noopener">GitHub</a>
         </div>
-    </nav>
-    
-    <div class="container px-4 px-lg-5" id="home">
-        <!-- Heading Row-->
-        <div class="row gx-4 gx-lg-5 align-items-center my-5">
-            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="./assets/img/banner.jpeg"
-                    alt="Usb Cali" /></div>
-            <!--https://dummyimage.com/900x400/dee2e6/6c757d.jpg-->
-            <div class="col-lg-5">
-                <h1 class="font-weight-light">Web Development</h1>
-                <p>This course is designed to provide Multimedia Engineering students with an understanding of and
-                    practical experience in front-end web development. Over the course of the program, students will
-                    progress from the fundamentals of HTML, CSS, and JavaScript to the advanced use of libraries and
-                    frameworks such as React.js. <br> <br> The course combines theory with practice including both
-                    individual and team projects to ensure students can apply what they have learned in real-world
-                    contexts.</p>
-                <!--<a class="btn btn-primary" href="#!">Call to Action!</a>-->
-            </div>
-        </div>
-        
-        <div class="card text-white bg-secondary my-5 py-4 text-center session-card">
-            <div class="card-body">
-                <p class="text-white m-0" id="sessionMessage">Bienvenido a la página de Web Development.</p>
-            </div>
-        </div>
-        
-        <div class="row gx-4 gx-lg-5" id="modules">
-            <div class="col-md-4 mb-5">
-                <div class="card h-100">
-                    <img src="./assets/img/class2.png" class="card-img-top" alt="Class 2">
-                    <div class="card-body">
-                        <h2 class="card-title">Design Trends</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex
-                            numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+    </header>
+
+    <main id="contenido">
+        <!-- INICIO -->
+        <section class="hero" id="inicio">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <p class="chip">Desarrollo de Aplicaciones Web</p>
+
+                    <h1 class="hero-title" aria-label="Cada clase, un proyecto nuevo.">
+                        <span class="line" aria-hidden="true"><span>Cada clase,</span></span>
+                        <span class="line" aria-hidden="true"><span><em>un</em> proyecto</span></span>
+                        <span class="line" aria-hidden="true"><span>nuevo.</span></span>
+                    </h1>
+
+                    <p class="lead">Mi portafolio de la clase en Ingeniería de Sistemas, USB Cali. Aquí publico cada
+                        ejercicio, taller y proyecto que hago con HTML, CSS y JavaScript.</p>
+
+                    <div class="hero-actions">
+                        <a class="pill pill-lime pill-lg" href="#proyectos">Ver proyectos</a>
+                        <a class="pill pill-ghost pill-lg" data-repo-link
+                            href="https://github.com/diana1022004/desarrollo-de-aplicaciones-web" target="_blank"
+                            rel="noopener">Código en GitHub</a>
                     </div>
-                    <div class="card-footer"><a class="btn btn-primary btn-sm"
-                            href="https://www.figma.com/make/4cFjc6qSwJ2ZWATA0oM1bF/Redesign-E-commerce-Platform?code-node-id=0-6&p=f&fullscreen=1"
-                            target="_blank">See</a></div>
+
+                    <p class="hero-meta"><strong id="projectCount">0</strong> trabajos publicados. Visitas en esta
+                        sesión: <strong id="visitCount">1</strong>.</p>
+                </div>
+
+                <aside class="hero-panel" aria-label="Último trabajo publicado">
+                    <div class="browser-stage">
+                        <div class="browser">
+                            <div class="browser-bar" aria-hidden="true">
+                                <i></i><i></i><i></i>
+                                <span>diana1022004.github.io</span>
+                            </div>
+                            <div class="browser-body">
+                                <p class="browser-kicker">Último trabajo publicado</p>
+                                <h2 class="browser-title" id="latestTitle">Cargando…</h2>
+                                <p class="browser-desc" id="latestDesc"></p>
+                                <div class="skeleton" aria-hidden="true"><b></b><b></b><b></b></div>
+                                <a class="pill pill-dark" id="latestLink" href="#proyectos">Abrir trabajo</a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section class="section" id="proyectos" aria-labelledby="proyectos-titulo">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2 class="h2" id="proyectos-titulo">Proyectos de la clase</h2>
+                    <div class="filters" id="filters" role="group" aria-label="Filtrar por tipo"></div>
+                </div>
+
+                <div class="index" id="projectList"></div>
+
+                <noscript>
+                    <p class="lead">Activa JavaScript para ver la lista de proyectos, o revisa el código directamente
+                        en <a href="https://github.com/diana1022004/desarrollo-de-aplicaciones-web">GitHub</a>.</p>
+                </noscript>
+            </div>
+        </section>
+
+        <!-- LA CLASE -->
+        <section class="section" id="clase" aria-labelledby="clase-titulo">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2 class="h2" id="clase-titulo">Lo que se aprende en la clase</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div>
+                        <p class="about-text">Un curso para tener experiencia práctica en desarrollo web front-end. Se
+                            parte de los fundamentos de HTML, CSS y JavaScript y se llega al uso de librerías y
+                            frameworks como React.js.</p>
+                        <p class="about-text">La teoría se combina con práctica, con proyectos individuales y en equipo
+                            para aplicar lo aprendido en situaciones reales.</p>
+                    </div>
+
+                    <dl class="topics">
+                        <div>
+                            <dt>HTML semántico</dt>
+                            <dd>Páginas bien estructuradas y accesibles.</dd>
+                        </div>
+                        <div>
+                            <dt>CSS responsive</dt>
+                            <dd>Diseños que se adaptan al celular, la tablet y el computador.</dd>
+                        </div>
+                        <div>
+                            <dt>JavaScript</dt>
+                            <dd>Lógica, arrays, eventos y manejo del DOM.</dd>
+                        </div>
+                        <div>
+                            <dt>localStorage y sessionStorage</dt>
+                            <dd>Guardar preferencias y datos en el navegador.</dd>
+                        </div>
+                        <div>
+                            <dt>Git y GitHub</dt>
+                            <dd>Control de versiones y publicación con GitHub Pages.</dd>
+                        </div>
+                        <div>
+                            <dt>React.js</dt>
+                            <dd>Parte del programa del curso.</dd>
+                        </div>
+                    </dl>
                 </div>
             </div>
-            <div class="col-md-4 mb-5">
-                <div class="card h-100">
-                    <img src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h2 class="card-title">Card Two</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex
-                            natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore
-                            voluptates quos eligendi labore.</p>
-                    </div>
-                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+        </section>
+
+        <!-- CÓDIGO -->
+        <section class="section" id="contacto" aria-labelledby="contacto-titulo">
+            <div class="wrap">
+                <div class="cta-box">
+                    <h2 class="cta-title" id="contacto-titulo">Todo el código está en GitHub.</h2>
+                    <p>Cada trabajo tiene su carpeta dentro del repositorio de la clase.</p>
+                    <a class="pill pill-dark pill-lg" data-repo-link
+                        href="https://github.com/diana1022004/desarrollo-de-aplicaciones-web" target="_blank"
+                        rel="noopener">Abrir el repositorio</a>
                 </div>
             </div>
-            <div class="col-md-4 mb-5">
-                <div class="card h-100">
-                    <img src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h2 class="card-title">Card Three</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex
-                            numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-                    </div>
-                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer-->
-    <footer class="py-5 bg-dark" id="contact">
-        <div class="container px-4 px-lg-5">
-            <p class="m-0 text-center text-white">Web Development &copy; 2026</p>
-            <p class="m-0 mt-2 text-center text-white-50 small" id="storageInfo"></p>
-        </div>
+        </section>
+    </main>
+
+    <footer class="wrap site-footer">
+        <p>&copy; <span id="year">2026</span> Diana. Desarrollo de Aplicaciones Web.</p>
+        <p id="storageInfo"></p>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="js/scripts.js"></script>
+
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
