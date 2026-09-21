@@ -1,24 +1,3 @@
-/* =====================================================================
-   ADMINISTRA AQUÍ TU PORTAFOLIO
-
-   Para agregar un trabajo nuevo:
-   1. Copia uno de los bloques { ... } de la lista PROJECTS.
-   2. Pégalo AL INICIO de la lista (el primero aparece como "Último trabajo").
-   3. Cambia sus datos y guarda. No hay que tocar el HTML ni el CSS.
-
-   Campos de cada trabajo
-   - title        Nombre del trabajo.
-   - description  Una o dos frases que expliquen qué hace.
-   - type         Categoría: "Ejercicio", "Proyecto", "Diseño" o la que quieras.
-                  Con ella se crean solos los botones de filtro.
-   - clase        Número de la clase (opcional). Muestra "Clase 3".
-   - meta         Texto que reemplaza a "Clase N" (opcional).
-   - tags         Lista de tecnologías, por ejemplo ["HTML", "CSS"].
-   - href         Enlace al trabajo. Para una carpeta del repo:
-                  "modules/class4/index.html". Puede ser un enlace externo.
-   - code         Enlace al código en GitHub (opcional).
-   ===================================================================== */
-
 window.SITE = {
   repo: "https://github.com/diana1022004/desarrollo-de-aplicaciones-web",
   // Muestra al final de la lista una fila que anuncia el próximo trabajo.

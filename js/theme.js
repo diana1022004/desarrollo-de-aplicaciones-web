@@ -1,7 +1,4 @@
-/* Modo claro / oscuro.
-   Guarda la preferencia en localStorage (clave "theme") y la aplica antes de
-   que se pinte la página para evitar el parpadeo. Se carga en el <head>. */
-(function () {
+ (function () {
   var KEY = "theme";
   var root = document.documentElement;
 

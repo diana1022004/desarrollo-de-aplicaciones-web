@@ -1,6 +1,4 @@
-/* Página principal: arma la lista de trabajos a partir de js/projects.js,
-   los filtros, el "Último trabajo" y el contador de visitas de la sesión
-   (sessionStorage). */
+
 (function () {
   var SITE = window.SITE || {};
   var PROJECTS = window.PROJECTS || [];

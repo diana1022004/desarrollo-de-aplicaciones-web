@@ -14,4 +14,3 @@ function procesarSolicitud(solicitud) {
 
 // Ejemplo
 console.log(procesarSolicitud(["Diana", "Don Quijote", "Cien años de soledad"]));
-// ["Carné de socio", "Don Quijote", "Cien años de soledad", "Diana"]
