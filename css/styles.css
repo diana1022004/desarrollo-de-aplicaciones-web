@@ -10882,8 +10882,7 @@ body.dark-mode .session-card {
   background-color: #343a40 !important;
 }
 
-/* Respeta a usuarios que tienen activado el modo oscuro del sistema
-   cuando todavía no existe una preferencia guardada. */
+
 @media (prefers-color-scheme: dark) {
   body:not(.light-mode):not(.dark-mode) {
     background-color: #121212;
