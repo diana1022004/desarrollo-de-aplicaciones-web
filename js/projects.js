@@ -34,5 +34,25 @@ window.PROJECTS = [
     clase: 2,
     tags: ["Figma", "UI"],
     href: "https://www.figma.com/make/4cFjc6qSwJ2ZWATA0oM1bF/Redesign-E-commerce-Platform?code-node-id=0-6&p=f&fullscreen=1"
+  },
+  {
+    title: "iPhone 18 Pro Max",
+    description:
+      "Landing page de producto trabajada en la Semana 7, con una imagen fija durante el scroll, efecto parallax y animaciones de entrada.",
+    type: "Ejercicio",
+    clase: 7,
+    tags: ["HTML", "CSS3", "Tailwind CSS", "JavaScript"],
+    href: "modules/semana7_css3/css/index.html",
+    code: "https://github.com/diana1022004/desarrollo-de-aplicaciones-web/tree/main/modules/semana7_css3"
+  },
+  {
+    title: "Scroll inmersivo: análisis comparativo",
+    description:
+      "Investigación sobre video HTML5, secuencias de imágenes en Canvas 2D y técnicas DOM/CSS para experiencias vinculadas al scroll, con criterios de rendimiento y un caso de estudio móvil.",
+    type: "Investigación",
+    meta: "Diana Catalina Rendon Rojas · 90703",
+    tags: ["Rendimiento web", "Canvas", "CSS", "Scroll"],
+    href: "modules/scroll-inmersivo/index.html",
+    code: "https://github.com/diana1022004/desarrollo-de-aplicaciones-web/tree/main/modules/scroll-inmersivo"
   }
 ];
